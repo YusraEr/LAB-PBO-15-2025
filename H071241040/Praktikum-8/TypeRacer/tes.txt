@@ -1,0 +1,21 @@
+  while (true) {
+        System.out.println("\nTyping Progress ...");
+        System.out.println("===================");
+
+        for (Typer typer : rareContestant) {
+            System.out.println(typer.getBotName() + " => " + typer.getWordsTyped());
+        }
+
+        boolean allFinished = true;
+        for (Typer typer : rareContestant) {
+            if (!typer.getWordsTyped().contains("(Selesai)")) {
+                allFinished = false;
+                break;
+            }
+        }
+
+         if (allFinished) break;
+
+        Thread.sleep(2000);
+        }
+    
